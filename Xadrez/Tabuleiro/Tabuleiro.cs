@@ -39,6 +39,19 @@
             p.Posicao = pos;
         }
 
+        public Peca RetirarPeca (Posicao pos)
+        {
+            if (Peca(pos) == null) 
+            {
+                return null;
+            }
+
+            Peca aux = Peca(pos);
+            aux.Posicao = null;
+            pecas[pos.Linha, pos.Coluna] = null;
+            return aux;
+        }
+
         public bool PosicaoValida(Posicao pos)
         {
             if (pos.Linha > 7 || pos.Linha < 0 || pos.Coluna > 7 || pos.Coluna < 0)
