@@ -16,11 +16,11 @@ namespace Xadrez
                 Console.WriteLine();
                 for (int j = 0; j < tab.Colunas; j++)
                 {
-                    if(tab.peca(i,j) == null)
+                    if(tab.Peca(i,j) == null)
                     {
                         Console.Write("-");
                     }
-                    Console.Write(tab.peca(i,j) + " ");
+                    Console.Write(tab.Peca(i,j) + " ");
                 }
             }
         }
