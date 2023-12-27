@@ -9,7 +9,7 @@ namespace Xadrez
         {
             try
             {
-                PartidaDeXadrez partida = new PartidaDeXadrez();
+                PartidaDeXadrez partida = new();
 
                 while (!partida.Terminada)
                 {
@@ -19,7 +19,7 @@ namespace Xadrez
                         Console.WriteLine();
                         Console.Write("Origem: ");
                         Posicao origem = Tela.LerPosicaoXadrez().toPosicao();
-                        partida.validarPosicaoDeorigem(origem);
+                        partida.ValidarPosicaoDeorigem(origem);
 
                         bool[,] posicoesPossiveis = partida.Tab.Peca(origem).MovimentosPossiveis();
 
