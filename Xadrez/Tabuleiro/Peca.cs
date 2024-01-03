@@ -27,14 +27,14 @@ namespace tabuleiro
         }
 
 
-        public bool ExisteMovimentosPossiveis ()
+        public bool ExisteMovimentosPossiveis()
         {
             bool[,] mat = MovimentosPossiveis();
-            for (int i = 0; i<Tab.Linhas; i++)
+            for (int i = 0; i < Tab.Linhas; i++)
             {
-                for (int j = 0; j<Tab.Colunas; j++)
+                for (int j = 0; j < Tab.Colunas; j++)
                 {
-                    if (mat[i,j])
+                    if (mat[i, j])
                     {
                         return true;
                     }
@@ -42,7 +42,7 @@ namespace tabuleiro
             }
             return false;
         }
-        public bool PodeMoverPara (Posicao pos)
+        public bool PodeMoverPara(Posicao pos)
         {
             return MovimentosPossiveis()[pos.Linha, pos.Coluna];
         }
